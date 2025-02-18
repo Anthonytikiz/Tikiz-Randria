@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikiz Randria | Portfolio Créatif</title>
+    <meta name="description" content="Développeur Fullstack & Designer d'interfaces innovantes">
+    <meta name="author" content="Tikiz Randria">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="brand">TikizRandria</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#projects">Réalisations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="nom">
+                <h1>Anthony Claran<br>Randrianantoandro</h1>
+                <h2>Développeur Fullstack<br>Designer Créatif</h2>
+            </div>
+            <div class="social-links">
+                <img src="./img/Rectangle 4.png" data-src="./img/Rectangle 4.png" alt="Portrait" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2>À propos</h2>
+            <div class="about-grid">
+                <div class="bio">
+                    <p>Ingénieur en développement fullstack et designer digital, je conçois des expériences interactives alliant performance technique et design émotionnel. Diplômé de l’IT Université d’Antananarivo, spécialisé en systèmes interactifs, j’allie expertise en ingénierie logicielle et sensibilité créative pour proposer des solutions innovantes et immersives.</p>
+                </div>
+                <div class="details">
+                    <ul>
+                        <li><strong>Spécialités :</strong> Architecture Frontend • Design Système • UX Engineering</li>
+                        <li><strong>Stack :</strong> Vue.js • Node.js • Three.js • Figma</li>
+                        <li><strong>Passions :</strong> Design génératif • Réalité augmentée • Typographie expérimentale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-content">
+            <h2>Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-scroll>
+                    <h3>Frontend Avancé</h3>
+                    <ul>
+                        <li>Vue 3 Composition API</li>
+                        <li>React Hooks & Context</li>
+                        <li>WebGL/WebGPU</li>
+                    </ul>
+                </div>
+                <div class="skill-category" data-scroll>
+                    <h3>Backend Scalable</h3>
+                    <ul>
+                        <li>NestJS Microservices</li>
+                        <li>GraphQL Federation</li>
+                        <li>MongoDB Atlas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-content">
+            <h2>Réalisations</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-scroll>
+                    <div class="skill-image">
+                        <img src="img/placeholder.jpg" data-src="img/cameleon1.png" alt="Interface Chameleon" loading="lazy">
+                        <!-- <img src="img/placeholder.jpg" data-src="img/cameleon.png" alt="Design System" loading="lazy"> -->
+                        <img src="img/placeholder.jpg" data-src="img/cameleon2.png" alt="Architecture" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>Cameleon</h3>
+                        <p>Conception de logo de vente de vêtement en restant sur les traditions de Madagascar</p>
+                        <ul class="tech-list">
+                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-content">
+            <h2>Collaboration</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Nom complet" required aria-label="Nom complet">
+                <input type="email" placeholder="Email professionnel" required aria-label="Email">
+                <textarea placeholder="Décrivez votre vision..." rows="5" required aria-label="Message"></textarea>
+                <button type="submit">Envoyer la proposition</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Tikiz Randria • Tous droits réservés</p>
+    </footer>
+
+    <button class="theme-toggle" aria-label="Basculer le thème">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
