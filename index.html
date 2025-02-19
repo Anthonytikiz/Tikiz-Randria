@@ -14,13 +14,13 @@
         })(window,document,'script','dataLayer','GTM-NRDZ99JB');</script>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRDZ99JB"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1F3J38WHYS"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1F3J38WHYS"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-1F3J38WHYS');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-1F3J38WHYS');
     </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -125,7 +125,6 @@
             </div>
         </div>
     </section>
-
     <section id="contact" class="section">
         <div class="section-content">
             <h2>Collaboration</h2>
@@ -148,5 +147,44 @@
     </button>
 
     <script src="app.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    // Initialisation EmailJS
+    (function() {
+        emailjs.init({
+            publicKey: "fs1lmPL5XJANt8QNK",
+        });
+    })();
+
+    document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            from_name: this.querySelector('[type="text"]').value,
+            from_email: this.querySelector('[type="email"]').value,
+            message: this.querySelector('textarea').value
+        };
+
+        try {
+            // Envoi du message
+            await emailjs.send('Developer_full_stack', 'template_lspwak2', {
+                from_name: formData.from_name,
+                from_email: formData.from_email,
+                message: formData.message,
+                subject: `Nouveau message de ${formData.from_name}`,
+                reply_to: formData.from_email
+            });
+
+            alert('Message envoyé avec succès !');
+            this.reset();
+
+        } catch (error) {
+            console.error('Erreur:', error);
+            alert('Erreur lors de l\'envoi du message');
+        }
+    });
+</script>
 </body>
 </html>
